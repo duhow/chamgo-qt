@@ -2,8 +2,8 @@ package main
 
 import (
 	"errors"
-	"go.bug.st/serial.v1"
-	"go.bug.st/serial.v1/enumerator"
+	"go.bug.st/serial"
+	"go.bug.st/serial/enumerator"
 	"log"
 	"strconv"
 	"strings"

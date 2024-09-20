@@ -2,7 +2,7 @@ package xmodem
 
 import (
 	"bytes"
-	"go.bug.st/serial.v1"
+	"go.bug.st/serial"
 	"log"
 	"time"
 )
