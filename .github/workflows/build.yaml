@@ -1,0 +1,18 @@
+on:
+  push:
+    branches:
+      - master
+  pull_request:
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v4
+    - run: docker pull therecipe/qt:linux
+    - run: export GO111MODULE=off; go get -v github.com/therecipe/qt/cmd/...
+    - run: qtdeploy -docker build linux
+    - uses: actions/upload-artifact@v4
+      with:
+        name: linux-artifact
+        path: deploy/
