@@ -1,7 +1,7 @@
 package main
 
 import (
-	"github.com/WolfgangMau/chamgo-qt/config"
+	"github.com/duhow/chamgo-qt/config"
 	"github.com/therecipe/qt/widgets"
 	"log"
 	"os"

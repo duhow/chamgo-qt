@@ -19,14 +19,14 @@ what is missing:
 
 to install/create the qt-bindings follow the instuctions in the wiki: https://github.com/therecipe/qt/wiki
 
-there are also some pre-compiled binaries in the ['release-section'](https://github.com/WolfgangMau/chamgo-qt/releases)
+there are also some pre-compiled binaries in the ['release-section'](https://github.com/duhow/chamgo-qt/releases)
 
 ### Screenshots
 #### Serial-Terminal
-![Serial-Terminal](https://github.com/WolfgangMau/chamgo-qt/blob/master/screenshots/Serial-Terminal.png)
+![Serial-Terminal](https://github.com/duhow/chamgo-qt/blob/master/screenshots/Serial-Terminal.png)
 
 #### Tag-Editor
-![Tag-Editor](https://github.com/WolfgangMau/chamgo-qt/blob/master/screenshots/Tag-Editor.png)
+![Tag-Editor](https://github.com/duhow/chamgo-qt/blob/master/screenshots/Tag-Editor.png)
 
 #### Data-Diff
-![Tag-Editor](https://github.com/WolfgangMau/chamgo-qt/blob/master/screenshots/Data-Diff.png)
+![Tag-Editor](https://github.com/duhow/chamgo-qt/blob/master/screenshots/Data-Diff.png)

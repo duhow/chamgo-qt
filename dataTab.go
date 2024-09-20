@@ -2,10 +2,10 @@ package main
 
 import (
 	"encoding/hex"
-	"github.com/WolfgangMau/chamgo-qt/config"
-	"github.com/WolfgangMau/chamgo-qt/crc16"
-	"github.com/WolfgangMau/chamgo-qt/eml2dump"
-	"github.com/WolfgangMau/chamgo-qt/xmodem"
+	"github.com/duhow/chamgo-qt/config"
+	"github.com/duhow/chamgo-qt/crc16"
+	"github.com/duhow/chamgo-qt/eml2dump"
+	"github.com/duhow/chamgo-qt/xmodem"
 	"github.com/therecipe/qt/core"
 	"github.com/therecipe/qt/widgets"
 	"log"
