@@ -40,7 +40,7 @@ jobs:
     - name: Rebuild project
       run: export GO111MODULE=off; go get -v github.com/therecipe/qt/cmd/...
     - run: |
-        export GO111MODULE=off
+        #export GO111MODULE=off
         export CGO_CFLAGS_ALLOW=".*"
         export CGO_CXXFLAGS_ALLOW=".*"
         export CGO_LDFLAGS_ALLOW=".*"
