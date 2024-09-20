@@ -21,8 +21,11 @@ jobs:
     - run: >
         sudo apt update && sudo apt-get -y install 
         build-essential libglu1-mesa-dev libpulse-dev libglib2.0-dev
-    - run: docker pull therecipe/qt:linux
-      if: false
+    - env:
+        CLONE_IMG: ghcr.io/${{ github.repository_owner }}/therecipe-qt:linux
+      run: |
+        docker pull ${CLONE_IMG}
+        docker tag ${CLONE_IMG} therecipe/qt:linux
     - run: |
         export CGO_CFLAGS_ALLOW=".*" 
         export CGO_CXXFLAGS_ALLOW=".*" 
