@@ -9,7 +9,11 @@ jobs:
     runs-on: ubuntu-latest
     steps:
     - uses: actions/checkout@v4
+    - uses: actions/setup-go@v5
+      with:
+        go-version: '^1.13.1'
     - run: docker pull therecipe/qt:linux
+      if: false
     - run: export GO111MODULE=off; go get -v github.com/therecipe/qt/cmd/...
       continue-on-error: true
     - name: patch code
@@ -17,7 +21,7 @@ jobs:
         echo "package astutil" > $(go env GOPATH)/src/golang.org/x/tools/go/ast/astutil/util.go
     - name: Rebuild project
       run: export GO111MODULE=off; go get -v github.com/therecipe/qt/cmd/...
-    - run: qtdeploy -docker build linux
+    - run: $(go env GOPATH)/bin/qtdeploy -docker build linux
     - uses: actions/upload-artifact@v4
       with:
         name: linux-artifact
