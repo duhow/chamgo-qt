@@ -11,6 +11,12 @@ jobs:
     - uses: actions/checkout@v4
     - run: docker pull therecipe/qt:linux
     - run: export GO111MODULE=off; go get -v github.com/therecipe/qt/cmd/...
+      continue-on-error: true
+    - name: patch code
+      run: |
+        echo "package astutil" > $(go env GOPATH)/src/golang.org/x/tools/go/ast/astutil/util.go
+    - name: Rebuild project
+      run: export GO111MODULE=off; go get -v github.com/therecipe/qt/cmd/...
     - run: qtdeploy -docker build linux
     - uses: actions/upload-artifact@v4
       with:
